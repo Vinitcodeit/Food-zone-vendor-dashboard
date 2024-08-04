@@ -64,7 +64,7 @@ const Login = ({ showWelcomeHandler }) => {
   return (
     <div className="loginSection">
       {loading ? (
-        <div className="loadingIndicator">Loading...</div>
+        <div className="loadingIndicator"><h4>Loading...</h4></div>
       ) : (
         <form className="authForm" onSubmit={LoginHandler}>
           <h3>Vendor Login</h3>

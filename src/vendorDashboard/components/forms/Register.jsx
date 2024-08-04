@@ -46,7 +46,7 @@ const Register = ({ showLoginHandler }) => {
   return (
     <div className='registerSection'>
       {loading ? (
-        <div className="loadingIndicator">Loading...</div>
+        <div className="loadingIndicator"><h4>Loading...</h4></div>
       ) : (
         <form className="authForm" onSubmit={handleSubmit}>
           <h3>Vendor Register</h3>
