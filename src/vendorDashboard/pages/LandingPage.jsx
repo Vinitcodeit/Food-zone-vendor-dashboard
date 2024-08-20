@@ -23,15 +23,18 @@ const LandingPage = () => {
   const loginToken = localStorage.getItem('loginToken')
   if(loginToken){
   setShowLogout(true)
+  setShowwelcome(true)
   }
   },[])
 
   useEffect(()=>{
-const firmName = localStorage.getItem('firmName')
-if(firmName){
-  setShowFirmTitle(false)
-}
-  },[])
+    const firmName = localStorage.getItem('firmName');
+    const firmId = localStorage.getItem('firmId')
+    if(firmName || firmId ){
+        setShowFirmTitle(false)
+        setShowwelcome(true)
+    }
+},[])
 
   const logOutHandler = ()=>{
     confirm("Are you sure to Logout?")
@@ -40,6 +43,7 @@ if(firmName){
     localStorage.removeItem("firmName")
     setShowLogout(false)
     setShowFirmTitle(true)
+    setShowwelcome(false)
 
   }
 
