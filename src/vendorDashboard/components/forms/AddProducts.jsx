@@ -141,7 +141,7 @@ const AddProducts = () => {
         <label>Description</label>
         <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
         <br />
-        <label>Product Image</label>
+        <label>Firm Image</label>
         <input type="file" onChange={handleImageUpload} />
         <br />
         <div className="btnSubmit">
